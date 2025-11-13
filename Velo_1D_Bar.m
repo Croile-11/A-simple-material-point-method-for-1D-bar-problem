@@ -1,8 +1,8 @@
 % This is a one-dimesion wave propagation program with the MPM.
 % It was started by Luming Shen on Mar. 16 2001.
+% It was modified by Taoran Li on Nov. 12 2023.
 % It was designed to calculate a bar with its left end fixed and its right end exerted.
 % One material point per cell is used initially.
-% Comments were revised on 01/21/03.
 % For more information about the MPM, please refer to the following papers:
 % D. Sulsky, Z. Chen, H.L. Schreyer, 1994, "A particle method for history-dependent materials", Computer methods in applied mechanics and engineering, vol. 118 pp.179-196.
 % Z. Chen, W. Hu, L. Shen, X. Xin and R. Brannon, 2002, "An evaluation of the MPM for simulating dynamic failure with damage diffusion", Engineering Fracture Mechanics, vol. 69, pp. 1873-1890.
@@ -183,4 +183,5 @@ hold on;
 plot(xt,xxp(25,:))
 a1=12.5;w1=b1*sqrt(ys/rho);a2=v0/b1/L/w1;
 xcm=a1+a2*sin(w1*xt);
+
 plot(xt,xcm)
